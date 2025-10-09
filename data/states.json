@@ -1,0 +1,299 @@
+[
+  {
+    "nombre": "Baja California",
+    "codigo": "BC",
+    "region": "Norte",
+    "activo": true,
+    "_id": "1759947857165butp30s7s",
+    "createdAt": "2025-10-08T18:24:17.165Z",
+    "updatedAt": "2025-10-08T18:24:17.165Z"
+  },
+  {
+    "nombre": "Baja California Sur",
+    "codigo": "BCS",
+    "region": "Norte",
+    "activo": true,
+    "_id": "17599478571776ljl0pfuj",
+    "createdAt": "2025-10-08T18:24:17.177Z",
+    "updatedAt": "2025-10-08T18:24:17.177Z"
+  },
+  {
+    "nombre": "Sonora",
+    "codigo": "SON",
+    "region": "Norte",
+    "activo": true,
+    "_id": "17599478571818ojwbma0a",
+    "createdAt": "2025-10-08T18:24:17.181Z",
+    "updatedAt": "2025-10-08T18:24:17.181Z"
+  },
+  {
+    "nombre": "Chihuahua",
+    "codigo": "CHIH",
+    "region": "Norte",
+    "activo": true,
+    "_id": "1759947857186ze2mqb5qr",
+    "createdAt": "2025-10-08T18:24:17.186Z",
+    "updatedAt": "2025-10-08T18:24:17.186Z"
+  },
+  {
+    "nombre": "Coahuila",
+    "codigo": "COAH",
+    "region": "Norte",
+    "activo": true,
+    "_id": "1759947857188y9lo8e393",
+    "createdAt": "2025-10-08T18:24:17.188Z",
+    "updatedAt": "2025-10-08T18:24:17.188Z"
+  },
+  {
+    "nombre": "Nuevo León",
+    "codigo": "NL",
+    "region": "Norte",
+    "activo": true,
+    "_id": "1759947857195d3h8fuq8j",
+    "createdAt": "2025-10-08T18:24:17.195Z",
+    "updatedAt": "2025-10-08T18:24:17.195Z"
+  },
+  {
+    "nombre": "Tamaulipas",
+    "codigo": "TAMS",
+    "region": "Norte",
+    "activo": true,
+    "_id": "1759947857199vrnpkw38u",
+    "createdAt": "2025-10-08T18:24:17.199Z",
+    "updatedAt": "2025-10-08T18:24:17.199Z"
+  },
+  {
+    "nombre": "Ciudad de México",
+    "codigo": "CDMX",
+    "region": "Centro",
+    "activo": true,
+    "_id": "17599478572027lj34vcgw",
+    "createdAt": "2025-10-08T18:24:17.202Z",
+    "updatedAt": "2025-10-08T18:24:17.202Z"
+  },
+  {
+    "nombre": "Estado de México",
+    "codigo": "MEX",
+    "region": "Centro",
+    "activo": true,
+    "_id": "1759947857210dkwnzr5wi",
+    "createdAt": "2025-10-08T18:24:17.210Z",
+    "updatedAt": "2025-10-08T18:24:17.210Z"
+  },
+  {
+    "nombre": "Hidalgo",
+    "codigo": "HGO",
+    "region": "Centro",
+    "activo": true,
+    "_id": "1759947857213id86asvaa",
+    "createdAt": "2025-10-08T18:24:17.213Z",
+    "updatedAt": "2025-10-08T18:24:17.213Z"
+  },
+  {
+    "nombre": "Morelos",
+    "codigo": "MOR",
+    "region": "Centro",
+    "activo": true,
+    "_id": "17599478572157div3am8z",
+    "createdAt": "2025-10-08T18:24:17.215Z",
+    "updatedAt": "2025-10-08T18:24:17.215Z"
+  },
+  {
+    "nombre": "Puebla",
+    "codigo": "PUE",
+    "region": "Centro",
+    "activo": true,
+    "_id": "1759947857217f7cwns31r",
+    "createdAt": "2025-10-08T18:24:17.217Z",
+    "updatedAt": "2025-10-08T18:24:17.217Z"
+  },
+  {
+    "nombre": "Tlaxcala",
+    "codigo": "TLAX",
+    "region": "Centro",
+    "activo": true,
+    "_id": "1759947857219uhov85c4w",
+    "createdAt": "2025-10-08T18:24:17.219Z",
+    "updatedAt": "2025-10-08T18:24:17.219Z"
+  },
+  {
+    "nombre": "Chiapas",
+    "codigo": "CHIS",
+    "region": "Sur",
+    "activo": true,
+    "_id": "17599478572221ohck2kj1",
+    "createdAt": "2025-10-08T18:24:17.222Z",
+    "updatedAt": "2025-10-08T18:24:17.222Z"
+  },
+  {
+    "nombre": "Oaxaca",
+    "codigo": "OAX",
+    "region": "Sur",
+    "activo": true,
+    "_id": "1759947857225rqze9ck7r",
+    "createdAt": "2025-10-08T18:24:17.225Z",
+    "updatedAt": "2025-10-08T18:24:17.225Z"
+  },
+  {
+    "nombre": "Tabasco",
+    "codigo": "TAB",
+    "region": "Sur",
+    "activo": true,
+    "_id": "17599478572275jo48up84",
+    "createdAt": "2025-10-08T18:24:17.227Z",
+    "updatedAt": "2025-10-08T18:24:17.227Z"
+  },
+  {
+    "nombre": "Veracruz",
+    "codigo": "VER",
+    "region": "Sur",
+    "activo": true,
+    "_id": "17599478572294q4zndlcl",
+    "createdAt": "2025-10-08T18:24:17.229Z",
+    "updatedAt": "2025-10-08T18:24:17.229Z"
+  },
+  {
+    "nombre": "Yucatán",
+    "codigo": "YUC",
+    "region": "Sur",
+    "activo": true,
+    "_id": "17599478572305wvqt6cea",
+    "createdAt": "2025-10-08T18:24:17.231Z",
+    "updatedAt": "2025-10-08T18:24:17.231Z"
+  },
+  {
+    "nombre": "Campeche",
+    "codigo": "CAMP",
+    "region": "Sur",
+    "activo": true,
+    "_id": "175994785723282zpzoxo1",
+    "createdAt": "2025-10-08T18:24:17.232Z",
+    "updatedAt": "2025-10-08T18:24:17.232Z"
+  },
+  {
+    "nombre": "Quintana Roo",
+    "codigo": "QROO",
+    "region": "Sur",
+    "activo": true,
+    "_id": "1759947857234mdsh5nthv",
+    "createdAt": "2025-10-08T18:24:17.234Z",
+    "updatedAt": "2025-10-08T18:24:17.234Z"
+  },
+  {
+    "nombre": "Jalisco",
+    "codigo": "JAL",
+    "region": "Occidente",
+    "activo": true,
+    "_id": "17599478572357bg37a0do",
+    "createdAt": "2025-10-08T18:24:17.235Z",
+    "updatedAt": "2025-10-08T18:24:17.235Z"
+  },
+  {
+    "nombre": "Colima",
+    "codigo": "COL",
+    "region": "Occidente",
+    "activo": true,
+    "_id": "1759947857237rgxyujnm4",
+    "createdAt": "2025-10-08T18:24:17.237Z",
+    "updatedAt": "2025-10-08T18:24:17.237Z"
+  },
+  {
+    "nombre": "Michoacán",
+    "codigo": "MICH",
+    "region": "Occidente",
+    "activo": true,
+    "_id": "1759947857238lj3cntncp",
+    "createdAt": "2025-10-08T18:24:17.238Z",
+    "updatedAt": "2025-10-08T18:24:17.238Z"
+  },
+  {
+    "nombre": "Nayarit",
+    "codigo": "NAY",
+    "region": "Occidente",
+    "activo": true,
+    "_id": "175994785724132wl6biv6",
+    "createdAt": "2025-10-08T18:24:17.241Z",
+    "updatedAt": "2025-10-08T18:24:17.241Z"
+  },
+  {
+    "nombre": "Sinaloa",
+    "codigo": "SIN",
+    "region": "Occidente",
+    "activo": true,
+    "_id": "175994785724430l3n5t8t",
+    "createdAt": "2025-10-08T18:24:17.244Z",
+    "updatedAt": "2025-10-08T18:24:17.244Z"
+  },
+  {
+    "nombre": "Durango",
+    "codigo": "DGO",
+    "region": "Occidente",
+    "activo": true,
+    "_id": "1759947857245ml87udvfa",
+    "createdAt": "2025-10-08T18:24:17.245Z",
+    "updatedAt": "2025-10-08T18:24:17.245Z"
+  },
+  {
+    "nombre": "San Luis Potosí",
+    "codigo": "SLP",
+    "region": "Oriente",
+    "activo": true,
+    "_id": "1759947857247qu9pfkdhj",
+    "createdAt": "2025-10-08T18:24:17.247Z",
+    "updatedAt": "2025-10-08T18:24:17.247Z"
+  },
+  {
+    "nombre": "Querétaro",
+    "codigo": "QRO",
+    "region": "Oriente",
+    "activo": true,
+    "_id": "1759947857248gu33tdql8",
+    "createdAt": "2025-10-08T18:24:17.248Z",
+    "updatedAt": "2025-10-08T18:24:17.248Z"
+  },
+  {
+    "nombre": "Guanajuato",
+    "codigo": "GTO",
+    "region": "Oriente",
+    "activo": true,
+    "_id": "1759947857250o6hjoydj0",
+    "createdAt": "2025-10-08T18:24:17.250Z",
+    "updatedAt": "2025-10-08T18:24:17.250Z"
+  },
+  {
+    "nombre": "Aguascalientes",
+    "codigo": "AGS",
+    "region": "Oriente",
+    "activo": true,
+    "_id": "1759947857252focjgpcyf",
+    "createdAt": "2025-10-08T18:24:17.252Z",
+    "updatedAt": "2025-10-08T18:24:17.252Z"
+  },
+  {
+    "nombre": "Zacatecas",
+    "codigo": "ZAC",
+    "region": "Oriente",
+    "activo": true,
+    "_id": "1759947857254wc8g7yk4x",
+    "createdAt": "2025-10-08T18:24:17.254Z",
+    "updatedAt": "2025-10-08T18:24:17.254Z"
+  },
+  {
+    "nombre": "Guerrero",
+    "codigo": "GRO",
+    "region": "Oriente",
+    "activo": true,
+    "_id": "1759947857256x67jaad0t",
+    "createdAt": "2025-10-08T18:24:17.256Z",
+    "updatedAt": "2025-10-08T18:24:17.256Z"
+  },
+  {
+    "nombre": "Yucalpeten",
+    "codigo": "YE",
+    "region": "Sur",
+    "activo": true,
+    "_id": "1760034069079xvhnk3w2q",
+    "createdAt": "2025-10-09T18:21:09.079Z",
+    "updatedAt": "2025-10-09T18:21:09.079Z"
+  }
+]

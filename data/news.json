@@ -1,0 +1,52 @@
+[
+  {
+    "titulo": "Nueva infraestructura en Ciudad de México",
+    "contenido": "El gobierno de la Ciudad de México anunció una inversión millonaria para mejorar la infraestructura urbana...",
+    "resumen": "Inversión millonaria para infraestructura urbana en CDMX",
+    "autor": "1760031231848t7gj5llcc",
+    "categoria": "507f1f77bcf86cd799439011",
+    "estado": "507f1f77bcf86cd799439012",
+    "imagenUrl": "https://example.com/imagen.jpg",
+    "fuente": "Gobierno CDMX",
+    "estadoVerificacion": "aprobada",
+    "fechaPublicacion": "2025-10-09T17:37:32.811Z",
+    "verificadoPor": "1760031231848t7gj5llcc",
+    "fechaVerificacion": "2025-10-09T17:37:32.811Z",
+    "motivoRechazo": null,
+    "etiquetas": [
+      "infraestructura",
+      "cdmx",
+      "gobierno"
+    ],
+    "visitas": 0,
+    "activa": true,
+    "_id": "1760031452811sznotebv3",
+    "createdAt": "2025-10-09T17:37:32.811Z",
+    "updatedAt": "2025-10-09T17:37:32.811Z"
+  },
+  {
+    "titulo": "Nueva infraestructura en Ciudad de Puebla",
+    "contenido": "El gobierno de la Ciudad de México anunció una inversión millonaria para mejorar la infraestructura urbana...",
+    "resumen": "Inversión millonaria para infraestructura urbana en CDMX",
+    "autor": "1760031231848t7gj5llcc",
+    "categoria": "507f1f77bcf86cd799439011",
+    "estado": "507f1f77bcf86cd799439012",
+    "imagenUrl": "https://example.com/imagen.jpg",
+    "fuente": "Gobierno CDMX",
+    "estadoVerificacion": "aprobada",
+    "fechaPublicacion": "2025-10-09T18:15:12.789Z",
+    "verificadoPor": "1760031231848t7gj5llcc",
+    "fechaVerificacion": "2025-10-09T18:15:12.789Z",
+    "motivoRechazo": null,
+    "etiquetas": [
+      "infraestructura",
+      "cdmx",
+      "gobierno"
+    ],
+    "visitas": 0,
+    "activa": true,
+    "_id": "1760033712789sxra9w9uu",
+    "createdAt": "2025-10-09T18:15:12.789Z",
+    "updatedAt": "2025-10-09T18:15:12.789Z"
+  }
+]

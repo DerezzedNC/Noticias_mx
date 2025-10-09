@@ -1,0 +1,101 @@
+[
+  {
+    "nombre": "Política",
+    "descripcion": "Noticias sobre política nacional, estatal y municipal",
+    "color": "#FF5733",
+    "activa": true,
+    "_id": "1759947857261c6ma0e5ft",
+    "createdAt": "2025-10-08T18:24:17.261Z",
+    "updatedAt": "2025-10-08T18:24:17.261Z"
+  },
+  {
+    "nombre": "Economía",
+    "descripcion": "Noticias sobre economía, finanzas y negocios",
+    "color": "#28A745",
+    "activa": true,
+    "_id": "1759947857263c2dbigdm3",
+    "createdAt": "2025-10-08T18:24:17.263Z",
+    "updatedAt": "2025-10-08T18:24:17.263Z"
+  },
+  {
+    "nombre": "Sociedad",
+    "descripcion": "Noticias sobre temas sociales y comunitarios",
+    "color": "#17A2B8",
+    "activa": true,
+    "_id": "1759947857265ix2385kee",
+    "createdAt": "2025-10-08T18:24:17.265Z",
+    "updatedAt": "2025-10-08T18:24:17.265Z"
+  },
+  {
+    "nombre": "Seguridad",
+    "descripcion": "Noticias sobre seguridad pública y justicia",
+    "color": "#DC3545",
+    "activa": true,
+    "_id": "175994785726700bftv6hq",
+    "createdAt": "2025-10-08T18:24:17.267Z",
+    "updatedAt": "2025-10-08T18:24:17.267Z"
+  },
+  {
+    "nombre": "Salud",
+    "descripcion": "Noticias sobre salud pública y medicina",
+    "color": "#FFC107",
+    "activa": true,
+    "_id": "175994785729055pqe36k2",
+    "createdAt": "2025-10-08T18:24:17.290Z",
+    "updatedAt": "2025-10-08T18:24:17.290Z"
+  },
+  {
+    "nombre": "Educación",
+    "descripcion": "Noticias sobre educación y ciencia",
+    "color": "#6F42C1",
+    "activa": true,
+    "_id": "1759947857327jc266q7rk",
+    "createdAt": "2025-10-08T18:24:17.327Z",
+    "updatedAt": "2025-10-08T18:24:17.327Z"
+  },
+  {
+    "nombre": "Deportes",
+    "descripcion": "Noticias deportivas locales y nacionales",
+    "color": "#FD7E14",
+    "activa": true,
+    "_id": "1759947857369773f1tn3e",
+    "createdAt": "2025-10-08T18:24:17.369Z",
+    "updatedAt": "2025-10-08T18:24:17.369Z"
+  },
+  {
+    "nombre": "Cultura",
+    "descripcion": "Noticias sobre arte, cultura y entretenimiento",
+    "color": "#E83E8C",
+    "activa": true,
+    "_id": "17599478573999dddjfyll",
+    "createdAt": "2025-10-08T18:24:17.399Z",
+    "updatedAt": "2025-10-08T18:24:17.399Z"
+  },
+  {
+    "nombre": "Tecnología",
+    "descripcion": "Noticias sobre tecnología e innovación",
+    "color": "#20C997",
+    "activa": true,
+    "_id": "1759947857454ejec30s0q",
+    "createdAt": "2025-10-08T18:24:17.454Z",
+    "updatedAt": "2025-10-08T18:24:17.454Z"
+  },
+  {
+    "nombre": "Medio Ambiente",
+    "descripcion": "Noticias sobre ecología y medio ambiente",
+    "color": "#198754",
+    "activa": true,
+    "_id": "1759947857527co87kxi92",
+    "createdAt": "2025-10-08T18:24:17.527Z",
+    "updatedAt": "2025-10-08T18:24:17.527Z"
+  },
+  {
+    "nombre": "Academicas",
+    "descripcion": "Noticias relacionadas con Universidades",
+    "color": "#FF5733",
+    "activa": true,
+    "_id": "17600339930816mg77vj8f",
+    "createdAt": "2025-10-09T18:19:53.081Z",
+    "updatedAt": "2025-10-09T18:19:53.081Z"
+  }
+]

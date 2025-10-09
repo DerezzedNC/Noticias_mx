@@ -1,0 +1,870 @@
+{
+  "info": {
+    "name": "API Noticias Express México",
+    "description": "Colección completa de endpoints para la API de Noticias Express México",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "patch": 0
+    }
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000/api",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "user_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "news_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "category_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "state_id",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "🔐 Autenticación",
+      "item": [
+        {
+          "name": "Registrar Usuario Contribuidor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan Pérez\",\n  \"email\": \"juan@example.com\",\n  \"password\": \"123456\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/registro",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "registro"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Iniciar Sesión",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    const response = pm.response.json();",
+                  "    pm.collectionVariables.set('token', response.data.token);",
+                  "    pm.collectionVariables.set('user_id', response.data.user.id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"juan@example.com\",\n  \"password\": \"123456\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Perfil",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/perfil",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "perfil"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Perfil",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan Pérez Actualizado\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/perfil",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "perfil"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "📑 Categorías",
+      "item": [
+        {
+          "name": "Obtener Categorías Activas",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": ["{{base_url}}"],
+              "path": ["categories"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Todas las Categorías (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/categories/all",
+              "host": ["{{base_url}}"],
+              "path": ["categories", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Categoría (Admin)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "    const response = pm.response.json();",
+                  "    pm.collectionVariables.set('category_id', response.data.categoria._id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Política\",\n  \"descripcion\": \"Noticias sobre política nacional y local\",\n  \"color\": \"#FF5733\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": ["{{base_url}}"],
+              "path": ["categories"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Categoría por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/categories/{{category_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["categories", "{{category_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Categoría (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"descripcion\": \"Noticias actualizadas sobre política nacional, estatal y municipal\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/categories/{{category_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["categories", "{{category_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Activar/Desactivar Categoría (Admin)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/categories/{{category_id}}/toggle",
+              "host": ["{{base_url}}"],
+              "path": ["categories", "{{category_id}}", "toggle"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "🌎 Estados",
+      "item": [
+        {
+          "name": "Obtener Estados Activos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/states",
+              "host": ["{{base_url}}"],
+              "path": ["states"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Estados por Región",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/states?region=Centro",
+              "host": ["{{base_url}}"],
+              "path": ["states"],
+              "query": [
+                {
+                  "key": "region",
+                  "value": "Centro"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Regiones",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/states/regiones",
+              "host": ["{{base_url}}"],
+              "path": ["states", "regiones"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Estado (Admin)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "    const response = pm.response.json();",
+                  "    pm.collectionVariables.set('state_id', response.data.estado._id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Ciudad de México\",\n  \"codigo\": \"CDMX\",\n  \"region\": \"Centro\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/states",
+              "host": ["{{base_url}}"],
+              "path": ["states"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Estado por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/states/{{state_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["states", "{{state_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Estado (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Ciudad de México - Capital\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/states/{{state_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["states", "{{state_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "📰 Noticias",
+      "item": [
+        {
+          "name": "Obtener Noticias Aprobadas",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/news?page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["news"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Noticias",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/news?buscar=política&categoria={{category_id}}&estado={{state_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["news"],
+              "query": [
+                {
+                  "key": "buscar",
+                  "value": "política"
+                },
+                {
+                  "key": "categoria",
+                  "value": "{{category_id}}"
+                },
+                {
+                  "key": "estado",
+                  "value": "{{state_id}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Noticia (Contribuidor)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "    const response = pm.response.json();",
+                  "    pm.collectionVariables.set('news_id', response.data.noticia._id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Nueva reforma política en México genera debate\",\n  \"contenido\": \"El Congreso de la Unión debate una nueva reforma política que busca modernizar el sistema electoral mexicano. La propuesta incluye cambios significativos en la forma de elegir representantes populares, así como modificaciones en los mecanismos de participación ciudadana. Los legisladores han expresado opiniones divididas sobre los alcances de esta reforma, mientras que organizaciones civiles han manifestado su preocupación por algunos aspectos de la propuesta que consideran podrían afectar la democracia participativa.\",\n  \"resumen\": \"El Congreso debate una reforma política que modernizaría el sistema electoral, generando opiniones divididas entre legisladores y sociedad civil.\",\n  \"categoria\": \"{{category_id}}\",\n  \"estado\": \"{{state_id}}\",\n  \"fuente\": \"Congreso de la Unión\",\n  \"imagenUrl\": \"https://example.com/imagen-noticia.jpg\",\n  \"etiquetas\": [\"política\", \"reforma\", \"congreso\", \"electoral\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/news",
+              "host": ["{{base_url}}"],
+              "path": ["news"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Mis Noticias",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/news/user/mis-noticias?page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["news", "user", "mis-noticias"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Noticias Pendientes (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/news/pendientes?page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["news", "pendientes"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Aprobar Noticia (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accion\": \"aprobar\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/news/{{news_id}}/verificar",
+              "host": ["{{base_url}}"],
+              "path": ["news", "{{news_id}}", "verificar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Rechazar Noticia (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accion\": \"rechazar\",\n  \"motivoRechazo\": \"El contenido no cumple con los estándares de veracidad requeridos\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/news/{{news_id}}/verificar",
+              "host": ["{{base_url}}"],
+              "path": ["news", "{{news_id}}", "verificar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Noticia por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/news/{{news_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["news", "{{news_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Noticia",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Nueva reforma política en México genera intenso debate nacional\",\n  \"etiquetas\": [\"política\", \"reforma\", \"congreso\", \"electoral\", \"debate\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/news/{{news_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["news", "{{news_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Noticia",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/news/{{news_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["news", "{{news_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "👥 Usuarios",
+      "item": [
+        {
+          "name": "Obtener Todos los Usuarios (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users?page=1&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Estadísticas de Usuarios (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/stats",
+              "host": ["{{base_url}}"],
+              "path": ["users", "stats"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Usuario (Admin)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Admin Usuario\",\n  \"email\": \"admin@example.com\",\n  \"password\": \"123456\",\n  \"rol\": \"administrador\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": ["{{base_url}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Usuario por ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Usuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan Pérez Modificado\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cambiar Contraseña",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"passwordActual\": \"123456\",\n  \"nuevaPassword\": \"nuevaPassword123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}/password",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}", "password"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Suspender/Activar Usuario (Admin)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/{{user_id}}/toggle-estado",
+              "host": ["{{base_url}}"],
+              "path": ["users", "{{user_id}}", "toggle-estado"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "🏠 General",
+      "item": [
+        {
+          "name": "Página de Inicio",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": [""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ruta No Encontrada (404)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/ruta-inexistente",
+              "host": ["{{base_url}}"],
+              "path": ["ruta-inexistente"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  }
+}

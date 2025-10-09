@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Administrador",
+    "email": "admin@noticiasexpress.mx",
+    "password": "$2a$10$QujskahcqYyuNmwioQ.p.e8OnG/scUKcfjdeGDIIsoQ0qxf8Coiyi",
+    "rol": "administrador",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-08T18:24:18.380Z",
+    "ultimoAcceso": "2025-10-08T18:24:18.380Z",
+    "_id": "175994785838043h82fqlw",
+    "createdAt": "2025-10-08T18:24:18.380Z",
+    "updatedAt": "2025-10-08T18:24:18.380Z"
+  },
+  {
+    "nombre": "Juan Pérez",
+    "email": "juan@example.com",
+    "password": "$2a$10$izJ7Cljox5wwP7YnL5yqBOWYnAksLDhCTqZoWDa.tJR/i5KxAyTgO",
+    "rol": "contribuidor",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-08T18:24:18.474Z",
+    "ultimoAcceso": "2025-10-08T18:24:18.474Z",
+    "_id": "1759947858474rgpakw0zo",
+    "createdAt": "2025-10-08T18:24:18.474Z",
+    "updatedAt": "2025-10-08T18:24:18.474Z"
+  },
+  {
+    "nombre": "Juan Pérez Modificado",
+    "email": "angel@gmail.com",
+    "password": "$2a$10$SIsOLYM2E3X6LyteVuFtQ.o0wnz9ToUGhHECTGz4YtPeEkNJK6/mC",
+    "rol": "contribuidor",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-09T17:33:51.848Z",
+    "ultimoAcceso": "2025-10-09T18:29:26.142Z",
+    "_id": "1760031231848t7gj5llcc",
+    "createdAt": "2025-10-09T17:33:51.848Z",
+    "updatedAt": "2025-10-09T18:32:25.597Z"
+  },
+  {
+    "nombre": "Juan Pérez",
+    "email": "jun@example.com",
+    "password": "$2a$10$O4gAjoDu/L.KVq6GYYNDIe7JgfU1pPgKY.35MX.YVPhC57OGLCWT6",
+    "rol": "contribuidor",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-09T18:12:07.653Z",
+    "ultimoAcceso": "2025-10-09T18:12:07.653Z",
+    "_id": "1760033527654no64940k6",
+    "createdAt": "2025-10-09T18:12:07.655Z",
+    "updatedAt": "2025-10-09T18:12:07.655Z"
+  },
+  {
+    "nombre": "Mari Perez",
+    "email": "mari@example.com",
+    "password": "$2a$10$hTjxW6hM/n.icKJ25LPNOeeA8GgioMQJMyi2UdlenYCj3N1F1Kwmy",
+    "rol": "contribuidor",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-09T18:31:10.269Z",
+    "ultimoAcceso": "2025-10-09T18:31:10.269Z",
+    "_id": "1760034670269au09768f6",
+    "createdAt": "2025-10-09T18:31:10.269Z",
+    "updatedAt": "2025-10-09T18:31:10.269Z"
+  }
+]
