@@ -58,5 +58,53 @@
     "_id": "1760034670269au09768f6",
     "createdAt": "2025-10-09T18:31:10.269Z",
     "updatedAt": "2025-10-09T18:31:10.269Z"
+  },
+  {
+    "nombre": "cambio de mario",
+    "email": "mar@example.com",
+    "password": "$2a$10$78T5oJK9k4OH9NmtLU1pGOn.9ltZp.MgCyRbJYB1kwWvm2//4UuQW",
+    "rol": "contribuidor",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-09T20:17:55.436Z",
+    "ultimoAcceso": "2025-10-09T20:19:05.547Z",
+    "_id": "1760041075437ddnug7k2u",
+    "createdAt": "2025-10-09T20:17:55.437Z",
+    "updatedAt": "2025-10-09T20:19:32.918Z"
+  },
+  {
+    "nombre": "Admin Usuario",
+    "email": "admin@example.com",
+    "password": "$2a$10$P1KOorysAoxXHlYPu61I5ua/fmIUSybtppyp1Pi3CPAEhqdeAbOVy",
+    "rol": "administrador",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-09T20:22:08.434Z",
+    "ultimoAcceso": "2025-10-09T20:22:54.826Z",
+    "_id": "1760041328434flzzfbqnp",
+    "createdAt": "2025-10-09T20:22:08.435Z",
+    "updatedAt": "2025-10-09T20:22:54.828Z"
+  },
+  {
+    "nombre": "Javier Quintal",
+    "email": "javier@email.com",
+    "password": "$2a$10$54ODh2e2xzr11813z.YVjO1t7ocsDNhCb/1SBxY5Kx4N.1Awih0x2",
+    "rol": "contribuidor",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-18T06:04:18.755Z",
+    "ultimoAcceso": "2025-10-18T06:04:18.755Z",
+    "_id": "1760767458756r82zrkg1v",
+    "createdAt": "2025-10-18T06:04:18.756Z",
+    "updatedAt": "2025-10-18T06:04:18.756Z"
+  },
+  {
+    "nombre": "Juan Péna",
+    "email": "juanemail.com",
+    "password": "$2a$10$nK.kTglKP5rt3YYSPCLMbuRGc0QyWw67DyzL4xFsYEzvSelLYvHIC",
+    "rol": "contribuidor",
+    "estado": "activo",
+    "fechaRegistro": "2025-10-18T06:41:16.844Z",
+    "ultimoAcceso": "2025-10-18T06:41:16.844Z",
+    "_id": "1760769676845iyvrblw8a",
+    "createdAt": "2025-10-18T06:41:16.845Z",
+    "updatedAt": "2025-10-18T06:41:16.845Z"
   }
 ]

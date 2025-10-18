@@ -25,7 +25,7 @@
     "updatedAt": "2025-10-09T17:37:32.811Z"
   },
   {
-    "titulo": "Nueva infraestructura en Ciudad de Puebla",
+    "titulo": "Nueva infraestructura en Ciudad de Yucalpeten",
     "contenido": "El gobierno de la Ciudad de México anunció una inversión millonaria para mejorar la infraestructura urbana...",
     "resumen": "Inversión millonaria para infraestructura urbana en CDMX",
     "autor": "1760031231848t7gj5llcc",
@@ -34,9 +34,9 @@
     "imagenUrl": "https://example.com/imagen.jpg",
     "fuente": "Gobierno CDMX",
     "estadoVerificacion": "aprobada",
-    "fechaPublicacion": "2025-10-09T18:15:12.789Z",
+    "fechaPublicacion": "2025-10-09T20:27:03.447Z",
     "verificadoPor": "1760031231848t7gj5llcc",
-    "fechaVerificacion": "2025-10-09T18:15:12.789Z",
+    "fechaVerificacion": "2025-10-09T20:27:03.447Z",
     "motivoRechazo": null,
     "etiquetas": [
       "infraestructura",
@@ -45,8 +45,8 @@
     ],
     "visitas": 0,
     "activa": true,
-    "_id": "1760033712789sxra9w9uu",
-    "createdAt": "2025-10-09T18:15:12.789Z",
-    "updatedAt": "2025-10-09T18:15:12.789Z"
+    "_id": "1760041623447o7qvs1gt1",
+    "createdAt": "2025-10-09T20:27:03.447Z",
+    "updatedAt": "2025-10-09T20:27:03.447Z"
   }
 ]
